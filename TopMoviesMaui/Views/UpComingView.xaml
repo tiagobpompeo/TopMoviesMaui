@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TopMoviesMaui.Views.UpComingView"
+             Title="UpComingView">
+
+    <ListView
+         x:Name="listView"        
+         ItemsSource="{Binding MoviesOut}"
+         SeparatorColor="Transparent" 
+         CachingStrategy="RecycleElement"
+         ItemTapped="ListView_ItemTapped"
+         HasUnevenRows="True">
+
+        <ListView.Header/>
+
+          <ListView.ItemTemplate>
+            <DataTemplate>
+
+                 
+                        <ViewCell >
+                            <Grid Padding="12">
+                                <Frame
+                                   Padding="0"
+                                   
+                                   VerticalOptions="Start"
+                                   HasShadow="{OnPlatform Android=true, iOS=false}">
+                                    <Grid Padding="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="25" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image 
+                                            Grid.Row="0"
+                                            HeightRequest="120"                                            
+                                            WidthRequest="100"
+                                            Aspect="Fill" 
+                                            Grid.Column="0"
+                                            Grid.RowSpan="3"
+                                            Source="{Binding Poster_path}">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                             </Image.GestureRecognizers>
+                                        </Image>
+                                        <Label 
+                                           x:Name="title" 
+                                           Grid.Row="0" 
+                                           Grid.Column="1"
+                                           Grid.ColumnSpan="2"
+                                           Margin="6,10,6,6" 
+                                           Text="{Binding Title}" 
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Start"
+                                           LineBreakMode="TailTruncation" 
+                                           Style="{StaticResource TitleStyle}"
+                                           FontAttributes="Bold" 
+                                        />
+                                         <Label 
+                                           x:Name="genre"
+                                           Margin="6,6,6,6"
+                                           Text="{Binding Genre_ids,StringFormat='Genre : {0:N}'}"
+                                           Grid.Row="1" 
+                                           Grid.Column="1" 
+                                           VerticalTextAlignment="End"
+                                           HorizontalTextAlignment="Start" 
+                                           FontSize="Small" TextColor="Gray" 
+                                           FontAttributes="Bold" 
+                                        />
+                                        <Label 
+                                           Margin="6,0,6,10" 
+                                           x:Name="release"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Start"  
+                                           Grid.Row="2" 
+                                           Grid.Column="1" 
+                                           Text="{Binding Release_date}"
+                                           FontSize="Small" TextColor="Gray" 
+                                           FontAttributes="Bold" 
+                                        />
+                                        <Image
+                                            Margin="0,6,6,0" 
+                                            Grid.Column="2"
+                                            Grid.Row="0" 
+                                            Grid.RowSpan="3"
+                                            Source="seta.png" 
+                                            HeightRequest="25" 
+                                            WidthRequest="25">
+                                       </Image>
+                                        
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+
+            </DataTemplate>
+          </ListView.ItemTemplate>
+
+        <ListView.Footer/>
+
+    </ListView>
+
+
+</ContentPage>
