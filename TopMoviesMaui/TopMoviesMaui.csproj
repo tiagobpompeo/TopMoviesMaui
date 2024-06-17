@@ -66,16 +66,27 @@
 		<PackageReference Include="Acr.UserDialogs" Version="9.0.0" />
 		<PackageReference Include="FFImageLoading.Maui" Version="1.2.5" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Polly" Version="8.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Remove="Views\" />
 	  <None Remove="Models\" />
 	  <None Remove="ViewModels\" />
+	  <None Remove="Services\" />
+	  <None Remove="ViewModels\Base\" />
+	  <None Remove="Constants\" />
+	  <None Remove="Exceptions\" />
+	  <None Remove="Converters\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="ViewModels\" />
+	  <Folder Include="Services\" />
+	  <Folder Include="ViewModels\Base\" />
+	  <Folder Include="Constants\" />
+	  <Folder Include="Exceptions\" />
+	  <Folder Include="Converters\" />
 	</ItemGroup>
 </Project>

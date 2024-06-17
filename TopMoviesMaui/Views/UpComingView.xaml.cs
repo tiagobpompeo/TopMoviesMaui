@@ -19,5 +19,6 @@ public partial class UpComingView : ContentPage
 
     void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
     {
+
     }
 }

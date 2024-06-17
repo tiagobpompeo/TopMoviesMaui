@@ -43,7 +43,7 @@
                                             Aspect="Fill" 
                                             Grid.Column="0"
                                             Grid.RowSpan="3"
-                                            Source="{Binding Poster_path}">
+                                            Source="{Binding Poster_path, Converter={StaticResource BaseUrlImageSmall}}">
                                             <Image.GestureRecognizers>
                                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                                              </Image.GestureRecognizers>
