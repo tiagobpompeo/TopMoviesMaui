@@ -10,7 +10,7 @@ using TopMoviesMaui.Views;
 
 namespace TopMoviesMaui.ViewModels
 {
-    public class UpComingViewModel:ViewModelBase
+    public class UpComingViewModel : ViewModelBase
     {
         #region Attributes
         public UpComing _upComingService;        

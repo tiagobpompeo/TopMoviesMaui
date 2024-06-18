@@ -67,6 +67,7 @@
 		<PackageReference Include="FFImageLoading.Maui" Version="1.2.5" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="Polly" Version="8.4.0" />
+		<PackageReference Include="Autofac" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -79,6 +80,8 @@
 	  <None Remove="Exceptions\" />
 	  <None Remove="Converters\" />
 	  <None Remove="Behaviors\" />
+	  <None Remove="Bootstrap\" />
+	  <None Remove="Utility\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -90,5 +93,7 @@
 	  <Folder Include="Exceptions\" />
 	  <Folder Include="Converters\" />
 	  <Folder Include="Behaviors\" />
+	  <Folder Include="Bootstrap\" />
+	  <Folder Include="Utility\" />
 	</ItemGroup>
 </Project>

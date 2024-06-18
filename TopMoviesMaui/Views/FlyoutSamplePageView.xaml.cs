@@ -2,9 +2,9 @@
 
 namespace TopMoviesMaui.Views;
 
-public partial class FlyoutSamplePage : FlyoutPage
+public partial class FlyoutSamplePageView : FlyoutPage
 {
-    public FlyoutSamplePage()
+    public FlyoutSamplePageView()
     {
         InitializeComponent();
 

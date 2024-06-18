@@ -3,12 +3,13 @@ using TopMoviesMaui.Models;
 
 namespace TopMoviesMaui.Views;
 
-public partial class FlyoutMenuPage : ContentPage
+public partial class FlyoutMenuPageView : ContentPage
 {
 
     ObservableCollection<FlyoutPageItem> flyoutPageItems = new ObservableCollection<FlyoutPageItem>();
     public ObservableCollection<FlyoutPageItem> FlyoutPageItems { get { return flyoutPageItems; } }
-    public FlyoutMenuPage()
+
+    public FlyoutMenuPageView()
     {
         InitializeComponent();
         flyoutPageItems.Add(new FlyoutPageItem { Title = "Up Coming Movies", MenuIcon = "home.png" });

@@ -5,7 +5,7 @@ using TopMoviesMaui.Repository;
 
 namespace TopMoviesMaui.Services
 {
-	public class UpComing:IUpComing
+	public class UpComing: IUpComing
     {
         private readonly IGenericRepository _genericRepository;
 
