@@ -7,7 +7,6 @@ using TopMoviesMaui.Models;
 using TopMoviesMaui.Services;
 using TopMoviesMaui.ViewModels.Base;
 
-
 namespace TopMoviesMaui.ViewModels
 {
     public class UpComingViewModel:ViewModelBase
@@ -87,7 +86,7 @@ namespace TopMoviesMaui.ViewModels
 
         #region Constructor
         public UpComingViewModel()
-        {
+        {         
                       
             Title = "Upcoming";
             TextChangeInSearchCommand = new Command(PerformSearch);

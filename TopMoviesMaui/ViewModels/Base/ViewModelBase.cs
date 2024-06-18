@@ -18,8 +18,7 @@ namespace TopMoviesMaui.ViewModels.Base
             get => _isBusy;
             set
             {
-                _isBusy = value;
-
+                _isBusy = value;               
             }
         }
     
