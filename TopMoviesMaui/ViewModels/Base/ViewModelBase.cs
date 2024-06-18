@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using TopMoviesMaui.Services;
+using TopMoviesMaui.Services.Navigation;
 
 namespace TopMoviesMaui.ViewModels.Base
 {

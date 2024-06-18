@@ -10,12 +10,13 @@ public partial class UpComingView : ContentPage
 		InitializeComponent();
 
 		BindingContext = new UpComingViewModel();
+
+        listView.ItemSelected += (sender, e) =>
+        {
+            ((ListView)sender).SelectedItem = null;
+        };
     }
 
-    void ListView_ItemTapped(System.Object sender, Microsoft.Maui.Controls.ItemTappedEventArgs e)
-    {
-
-    }
 
     void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
     {

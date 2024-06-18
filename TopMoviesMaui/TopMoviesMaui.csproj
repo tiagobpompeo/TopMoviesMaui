@@ -78,6 +78,7 @@
 	  <None Remove="Constants\" />
 	  <None Remove="Exceptions\" />
 	  <None Remove="Converters\" />
+	  <None Remove="Behaviors\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -88,5 +89,6 @@
 	  <Folder Include="Constants\" />
 	  <Folder Include="Exceptions\" />
 	  <Folder Include="Converters\" />
+	  <Folder Include="Behaviors\" />
 	</ItemGroup>
 </Project>

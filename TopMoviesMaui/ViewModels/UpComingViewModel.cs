@@ -6,6 +6,7 @@ using System.Windows.Input;
 using TopMoviesMaui.Models;
 using TopMoviesMaui.Services;
 using TopMoviesMaui.ViewModels.Base;
+using TopMoviesMaui.Views;
 
 namespace TopMoviesMaui.ViewModels
 {
@@ -111,6 +112,7 @@ namespace TopMoviesMaui.ViewModels
                 {
                     Poster_path = pos.Poster_path,
                     Title = pos.Title,
+                    Id = pos.Id,
                     Release_date = pos.Release_date
                 });
             }
@@ -132,9 +134,20 @@ namespace TopMoviesMaui.ViewModels
             //}
         }
 
-        private void OnMovieTapped(Movies.Result selectedMovie)
+        private async void OnMovieTapped(Movies.Result selectedMovie)
         {
-            //_navigationService.NavigateToAsync<MovieDetailViewModel>(selectedMovie);
+            Console.WriteLine("OnMovieTapped " + selectedMovie.Id);
+
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+
+            if (navigationPage != null)
+            {
+                await navigationPage.PushAsync(new UpComingDetailView(null));
+            }
+            else
+            {
+                Application.Current.MainPage = new NavigationPage(new UpComingDetailView(selectedMovie));
+            }           
         }
 
         public void PerformSearch()

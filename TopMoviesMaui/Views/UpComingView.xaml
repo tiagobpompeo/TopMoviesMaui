@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TopMoviesMaui.Views.UpComingView"
+    xmlns:behaviors="clr-namespace:TopMoviesMaui.Behaviors;assembly=TopMoviesMaui" 
     Title="UpComingView">
 
     <StackLayout>
@@ -19,9 +20,15 @@
              x:Name="listView"        
              ItemsSource="{Binding MoviesOut}"
              SeparatorColor="Transparent" 
-             CachingStrategy="RecycleElement"
-             ItemTapped="ListView_ItemTapped"
+             CachingStrategy="RecycleElement"       
              HasUnevenRows="True">
+               <ListView.Behaviors>                    
+                    <behaviors:EventToCommandBehavior 
+                        EventName="ItemTapped" 
+                        Command="{Binding MovieTappedCommand}" 
+                        EventArgsConverter="{StaticResource LocalItemTappedConverter}">
+                    </behaviors:EventToCommandBehavior>
+                </ListView.Behaviors>
 
               <ListView.Header/>
 
