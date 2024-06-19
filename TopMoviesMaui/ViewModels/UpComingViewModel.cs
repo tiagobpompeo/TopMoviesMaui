@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using TopMoviesMaui.Bootstrap;
 using TopMoviesMaui.Models;
 using TopMoviesMaui.Services;
+using TopMoviesMaui.Services.Navigation;
 using TopMoviesMaui.ViewModels.Base;
+using TopMoviesMaui.Views;
 
 namespace TopMoviesMaui.ViewModels
 {
-    public class UpComingViewModel:ViewModelBase
+    public class UpComingViewModel : ViewModelBase
     {
         #region Attributes
         public UpComing _upComingService;        
@@ -111,6 +115,7 @@ namespace TopMoviesMaui.ViewModels
                 {
                     Poster_path = pos.Poster_path,
                     Title = pos.Title,
+                    Id = pos.Id,
                     Release_date = pos.Release_date
                 });
             }
@@ -123,18 +128,17 @@ namespace TopMoviesMaui.ViewModels
         #region Methods
         private async void CheckConnection()
         {
-            //var connection = await this._connectionService.CheckConnection();
-
-            //if (!connection.IsSuccess)
-            //{
-            //    await Application.Current.MainPage.DisplayAlert("Conexão de Rede", connection.Message, "OK");
-            //    return;
-            //}
+            
         }
 
-        private void OnMovieTapped(Movies.Result selectedMovie)
+        private async void OnMovieTapped(Movies.Result selectedMovie)
         {
-            //_navigationService.NavigateToAsync<MovieDetailViewModel>(selectedMovie);
+            Console.WriteLine("OnMovieTapped " + selectedMovie.Id);
+
+            var navigationService = AppContainer.Resolve<INavigationService>();
+            await navigationService.NavigateToAsync<UpComingDetailViewModel>(selectedMovie);// Inicia a pagina Inicial
+
+                 
         }
 
         public void PerformSearch()
@@ -144,17 +148,13 @@ namespace TopMoviesMaui.ViewModels
             }
             else
             {
-                //Movies = new InfiniteScrollCollection<Movies.Result>(_ItemsUnfiltered.Where(i => (i is Movies.Result && (((Movies.Result)i)
-                // .Title.ToLower()
-                // .Contains(_searchText.ToLower())))));
+                
             }
         }
 
         private void SearchMovie(string movieText)
         {
-            //Movies = new InfiniteScrollCollection<Movies.Result>(_ItemsUnfiltered.Where(i => (i is Movies.Result && (((Movies.Result)i)
-            //    .Title.ToLower()
-            //    .Contains(movieText.ToLower())))));
+           
         }
 
         public override Task InitializeAsync(object data)

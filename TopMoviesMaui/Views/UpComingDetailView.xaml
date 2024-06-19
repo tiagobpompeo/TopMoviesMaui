@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TopMoviesMaui.Views.UpComingDetailView"
+             Title="UpComingDetailView">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid 
+                Padding="0,0,0,25" 
+                BackgroundColor="Black">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ContentView 
+                    x:Name="ContentView" 
+                    Grid.Row="0" 
+                    BackgroundColor="Black">
+                   <Image
+                        Grid.Row="0" 
+                        x:Name="imageMovie"                        
+                        Aspect="AspectFit"                       
+                        Source="{Binding MovieDetail.Backdrop_path,Converter={StaticResource BaseUrlImageBig}}" 
+                        Opacity=".8">
+                    </Image>
+                </ContentView>
+                <Grid 
+                    RowSpacing="20" 
+                    x:Name="gridChildren" 
+                    Grid.Row="1" 
+                    BackgroundColor="Black">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                          <Label 
+                            Grid.Row="0" 
+                            x:Name="Title"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding MovieDetail.Title}" 
+                            TextColor="White"
+                          />
+                          <Label 
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            x:Name="Release"
+                            Text="{Binding MovieDetail.Release_date}"
+                            TextColor="White"
+                          />
+                         <Label 
+                            Grid.Row="1"
+                            HorizontalTextAlignment="Center"
+                            x:Name="Genres"
+                            FontSize="14" 
+                            Text="{Binding GenreMain}"
+                           TextColor="White"
+                           />
+                          <Label 
+                            Grid.Row="2" 
+                            x:Name="OverviewTitle"
+                            Text="{Binding MovieDetail.Overview}"
+                            TextColor="White"
+                          />
+                          <Grid Grid.Row="3">
+                             <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                             </Grid.RowDefinitions>
+                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                                <Button 
+                                    Margin="0,25,0,0"
+                                    Grid.Column="0"
+                                    BackgroundColor="Transparent"                                    
+                                    HorizontalOptions="Center"
+                                    ImageSource="list" 
+                                     
+                                 />
+                                <Image 
+                                    x:Name="Play"
+                                    Margin="0,25,0,0" 
+                                    Grid.Column="1"
+                                    HorizontalOptions="Center"
+                                    Source="play" 
+                                    >
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ShakeButton_Clicked"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Button 
+                                    Margin="0,25,0,0"
+                                    BackgroundColor="Transparent"
+                                    Grid.Column="2"
+                                    HorizontalOptions="Center"
+                                    ImageSource="rate"                                    
+                                 />
+                         </Grid> 
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

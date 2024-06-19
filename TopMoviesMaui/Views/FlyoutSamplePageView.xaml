@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:local="clr-namespace:TopMoviesMaui.Views"
+        x:Class="TopMoviesMaui.Views.FlyoutSamplePageView">
+<FlyoutPage.Flyout>
+    <local:FlyoutMenuPageView x:Name="flyoutPage" BindingContext="{Binding FlyoutMenuPageViewModel}"  />
+</FlyoutPage.Flyout>
+ <FlyoutPage.Detail>
+    <NavigationPage>
+        <x:Arguments>
+            <local:UpComingView />
+        </x:Arguments>
+    </NavigationPage>
+</FlyoutPage.Detail>
+</FlyoutPage>
