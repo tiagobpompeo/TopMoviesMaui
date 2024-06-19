@@ -163,9 +163,11 @@ namespace TopMoviesMaui.Services
         //map to join VM and VIEW dont need ViewModel Locator others cases is resolve trought Utility.ViewModelLocator
         private void CreatePageViewModelMappings()
         {
-            _mappings.Add(typeof(FlyoutMenuPageViewModel), typeof(FlyoutMenuPageView));
-            _mappings.Add(typeof(FlyoutSamplePageViewModel), typeof(FlyoutSamplePageView));              
+            _mappings.Add(typeof(FlyoutSamplePageViewModel), typeof(FlyoutSamplePageView));
+            _mappings.Add(typeof(FlyoutMenuPageViewModel), typeof(FlyoutMenuPageView));                   
             _mappings.Add(typeof(UpComingViewModel), typeof(UpComingView));
+            _mappings.Add(typeof(UpComingDetailViewModel), typeof(UpComingDetailView));
+            
             //others            
         }
     }

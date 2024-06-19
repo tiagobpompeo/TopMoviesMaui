@@ -3,8 +3,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using TopMoviesMaui.Bootstrap;
 using TopMoviesMaui.Models;
 using TopMoviesMaui.Services;
+using TopMoviesMaui.Services.Navigation;
 using TopMoviesMaui.ViewModels.Base;
 using TopMoviesMaui.Views;
 
@@ -138,16 +140,19 @@ namespace TopMoviesMaui.ViewModels
         {
             Console.WriteLine("OnMovieTapped " + selectedMovie.Id);
 
-            var navigationPage = Application.Current.MainPage as NavigationPage;
+            var navigationService = AppContainer.Resolve<INavigationService>();
+            await navigationService.NavigateToAsync<UpComingDetailViewModel>();// Inicia a pagina Inicial
 
-            if (navigationPage != null)
-            {
-                await navigationPage.PushAsync(new UpComingDetailView(null));
-            }
-            else
-            {
-                Application.Current.MainPage = new NavigationPage(new UpComingDetailView(selectedMovie));
-            }           
+            //var navigationPage = Application.Current.MainPage as NavigationPage;
+
+            //if (navigationPage != null)
+            //{
+            //    await navigationPage.PushAsync(new UpComingDetailView());
+            //}
+            //else
+            //{
+            //    Application.Current.MainPage = new NavigationPage(new UpComingDetailView());
+            //}           
         }
 
         public void PerformSearch()

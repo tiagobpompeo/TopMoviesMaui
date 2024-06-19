@@ -2,7 +2,7 @@
 
 public partial class UpComingDetailView : ContentPage
 {
-	public UpComingDetailView(Models.Movies.Result selectedMovie)
+	public UpComingDetailView()
 	{
 		InitializeComponent();
 	}

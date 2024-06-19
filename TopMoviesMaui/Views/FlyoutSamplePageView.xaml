@@ -4,9 +4,13 @@
         xmlns:local="clr-namespace:TopMoviesMaui.Views"
         x:Class="TopMoviesMaui.Views.FlyoutSamplePageView">
 <FlyoutPage.Flyout>
-    <local:FlyoutMenuPageView x:Name="flyoutPage" />
+    <local:FlyoutMenuPageView x:Name="flyoutPage" BindingContext="{Binding FlyoutMenuPageViewModel}"  />
 </FlyoutPage.Flyout>
-<FlyoutPage.Detail>
-    <ContentPage></ContentPage>
+ <FlyoutPage.Detail>
+    <NavigationPage>
+        <x:Arguments>
+            <local:UpComingView />
+        </x:Arguments>
+    </NavigationPage>
 </FlyoutPage.Detail>
 </FlyoutPage>

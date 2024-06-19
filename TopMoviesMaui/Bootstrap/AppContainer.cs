@@ -15,9 +15,10 @@ namespace TopMoviesMaui.Bootstrap
             var builder = new ContainerBuilder();
 
             //ViewModels
-            builder.RegisterType<FlyoutMenuPageViewModel>();
             builder.RegisterType<FlyoutSamplePageViewModel>();
+            builder.RegisterType<FlyoutMenuPageViewModel>();
             builder.RegisterType<UpComingViewModel>();
+            builder.RegisterType<UpComingDetailViewModel>();
             
 
             //services - data

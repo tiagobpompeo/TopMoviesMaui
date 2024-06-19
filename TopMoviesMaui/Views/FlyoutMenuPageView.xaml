@@ -6,7 +6,9 @@
              x:Class="TopMoviesMaui.Views.FlyoutMenuPageView"
              xmlns:system="clr-namespace:System;assembly=netstandard"
              Padding="0" BackgroundColor="#f1f1f1"
+             xmlns:behaviors="clr-namespace:TopMoviesMaui.Behaviors;assembly=TopMoviesMaui" 
              IconImageSource="hamburger.png"
+             xmlns:templates="clr-namespace:TopMoviesMaui.Views.Templates"
              Title=" ">
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                 Spacing="10" Margin="10,20">
@@ -34,31 +36,30 @@
     
         <BoxView HeightRequest="1" BackgroundColor="White"/>
 
-        <CollectionView x:Name="collectionViewFlyout"
+            <CollectionView x:Name="collectionViewFlyout"
                     x:FieldModifier="public"
+                    SelectionChanged="OnCollectionViewSelectionChanged"
                     SelectionMode="Single">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                    <Grid Padding="5,10" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Image Source="{Binding MenuIcon}" />
-                    <Label Grid.Column="1"
-                           Margin="20,0"
-                           Text="{Binding Title}"
-                           FontSize="20" TextColor="Black"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center" />
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                            <Grid Padding="5,10" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding MenuIcon}" />
+                            <Label Grid.Column="1"
+                                   Margin="20,0"
+                                   Text="{Binding Title}"
+                                   FontSize="20" TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center" />
                     
-                </Grid>
+                        </Grid>
                 
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
-        
-       
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
     </StackLayout>
 </ContentPage>

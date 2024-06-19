@@ -82,6 +82,8 @@
 	  <None Remove="Behaviors\" />
 	  <None Remove="Bootstrap\" />
 	  <None Remove="Utility\" />
+	  <None Remove="Views\Templates\" />
+	  <None Remove="Resources\Images\hamburguer.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -95,5 +97,9 @@
 	  <Folder Include="Behaviors\" />
 	  <Folder Include="Bootstrap\" />
 	  <Folder Include="Utility\" />
+	  <Folder Include="Views\Templates\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\hamburguer.png" />
 	</ItemGroup>
 </Project>
