@@ -12,7 +12,7 @@
             </ResourceDictionary.MergedDictionaries>
             <converters:AddBaseUrlConverterImageSmall x:Key="BaseUrlImageSmall" />
             <converters:ItemTappedConverter x:Key="LocalItemTappedConverter" />
-
+            <converters:AddBaseUrlConverterImageBig x:Key="BaseUrlImageBig" />
         </ResourceDictionary>
 
         

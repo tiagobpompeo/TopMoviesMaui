@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -127,13 +128,7 @@ namespace TopMoviesMaui.ViewModels
         #region Methods
         private async void CheckConnection()
         {
-            //var connection = await this._connectionService.CheckConnection();
-
-            //if (!connection.IsSuccess)
-            //{
-            //    await Application.Current.MainPage.DisplayAlert("Conexão de Rede", connection.Message, "OK");
-            //    return;
-            //}
+            
         }
 
         private async void OnMovieTapped(Movies.Result selectedMovie)
@@ -141,18 +136,9 @@ namespace TopMoviesMaui.ViewModels
             Console.WriteLine("OnMovieTapped " + selectedMovie.Id);
 
             var navigationService = AppContainer.Resolve<INavigationService>();
-            await navigationService.NavigateToAsync<UpComingDetailViewModel>();// Inicia a pagina Inicial
+            await navigationService.NavigateToAsync<UpComingDetailViewModel>(selectedMovie);// Inicia a pagina Inicial
 
-            //var navigationPage = Application.Current.MainPage as NavigationPage;
-
-            //if (navigationPage != null)
-            //{
-            //    await navigationPage.PushAsync(new UpComingDetailView());
-            //}
-            //else
-            //{
-            //    Application.Current.MainPage = new NavigationPage(new UpComingDetailView());
-            //}           
+                 
         }
 
         public void PerformSearch()
@@ -162,17 +148,13 @@ namespace TopMoviesMaui.ViewModels
             }
             else
             {
-                //Movies = new InfiniteScrollCollection<Movies.Result>(_ItemsUnfiltered.Where(i => (i is Movies.Result && (((Movies.Result)i)
-                // .Title.ToLower()
-                // .Contains(_searchText.ToLower())))));
+                
             }
         }
 
         private void SearchMovie(string movieText)
         {
-            //Movies = new InfiniteScrollCollection<Movies.Result>(_ItemsUnfiltered.Where(i => (i is Movies.Result && (((Movies.Result)i)
-            //    .Title.ToLower()
-            //    .Contains(movieText.ToLower())))));
+           
         }
 
         public override Task InitializeAsync(object data)
