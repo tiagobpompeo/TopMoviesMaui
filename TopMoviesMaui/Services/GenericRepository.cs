@@ -34,6 +34,7 @@ namespace TopMoviesMaui.Repository
                         retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))
                     )
                     .ExecuteAsync(async () => await httpClient.GetAsync(uri));
+               
 
                 if (responseMessage.IsSuccessStatusCode)
                 {
@@ -52,7 +53,8 @@ namespace TopMoviesMaui.Repository
 
             }
             catch (Exception e)
-            {
+            {                
+
                 Debug.WriteLine($"{e.GetType().Name + " : " + e.Message}");
                 throw;
             }
@@ -208,7 +210,10 @@ namespace TopMoviesMaui.Repository
 
         private HttpClient CreateHttpClient(string authToken)
         {
-            var httpClient = new HttpClient();
+            //var httpClient = new HttpClient();
+            var httpHandler = new SentryHttpMessageHandler();
+            var httpClient = new HttpClient(httpHandler);
+
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             if (!string.IsNullOrEmpty(authToken))
