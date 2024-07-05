@@ -1,5 +1,35 @@
 # TopMoviesMaui
 
+TopMovies Mobile App made in .NetMaui that makes use of The Movie Database (TMDb) API to demonstrate the possibilities of backend making use of a great variety of functionality.This app was build as an Enterprise Mobile Application with the MVVM pattern, dependency injection, commanding, testing, and more.
+
+### Platforms
+
+ - Android(Api 21+), iOS(10.3+)...
+
+### Features:
+
+- Master Detail
+- Online
+- ListView with Cache Strategy
+- Polly
+- MVVM Pattern
+
+
+### .NetMaui:
+
+- XAML UI
+- Behaviors
+- Converters
+- Custom Controls
+- Custom Renderers
+- Data Binding
+- IoC 
+- MVVM
+- Styles
+- Dialogs
+- Navigation
+
+## Images:
 
 ![Simulator Screenshot - iPhone 15 Pro Max - 2024-07-04 at 17 42 41](https://github.com/tiagobpompeo/TopMoviesMaui/assets/24531205/c9a98245-225e-4f9f-9c41-fc3324ee59d2)
 
