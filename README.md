@@ -14,6 +14,9 @@ TopMovies Mobile App made in .NetMaui that makes use of The Movie Database (TMDb
 - Polly
 - MVVM Pattern
 
+### Monitoring 
+Sentry software de código aberto de rastreamento de erro que mostra todas as falhas em sua pilha na hora em que elas acontecem, com os detalhes necessários para que você possa priorizar, identificar, reproduzir e corrigir cada problema.
+
 
 ### .NetMaui:
 
