@@ -42,6 +42,9 @@
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\seta.png" />
+	</ItemGroup>
+	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
@@ -85,6 +88,7 @@
 	  <None Remove="Utility\" />
 	  <None Remove="Views\Templates\" />
 	  <None Remove="Resources\Images\hamburguer.png" />
+	  <None Remove="Resources\Images\seta.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -102,5 +106,6 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\hamburguer.png" />
+	  <BundleResource Include="Resources\Images\seta.png" />
 	</ItemGroup>
 </Project>

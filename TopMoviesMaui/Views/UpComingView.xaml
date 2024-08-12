@@ -5,7 +5,11 @@
     x:Class="TopMoviesMaui.Views.UpComingView"
     xmlns:behaviors="clr-namespace:TopMoviesMaui.Behaviors;assembly=TopMoviesMaui" 
     Title="UpComingView">
-
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <Color x:Key="TextColorPage">Gray</Color>
+    </ResourceDictionary>
+</ContentPage.Resources>
     <StackLayout>
         <StackLayout.Margin>
              <OnPlatform x:TypeArguments="Thickness">
@@ -74,19 +78,24 @@
                                         HorizontalTextAlignment="Start"
                                         LineBreakMode="TailTruncation" 
                                         Style="{StaticResource TitleStyle}"
-                                        FontAttributes="Bold" 
-                                    />
+                                        FontAttributes="Bold">
+                                        <Label.Resources>
+
+
+                                        </Label.Resources>
+                                    </Label>
                                         <Label 
-                                        x:Name="genre"
-                                        Margin="6,6,6,6"
-                                        Text="{Binding Genre_ids,StringFormat='Genre : {0:N}'}"
-                                        Grid.Row="1" 
-                                        Grid.Column="1" 
-                                        VerticalTextAlignment="End"
-                                        HorizontalTextAlignment="Start" 
-                                        FontSize="Small" TextColor="Gray" 
-                                        FontAttributes="Bold" 
-                                    />
+                                            x:Name="genre"
+                                            Margin="6,6,6,6"
+                                            Text="{Binding Genre_ids,StringFormat='Genre : {0:N}'}"
+                                            Grid.Row="1" 
+                                            Grid.Column="1" 
+                                            VerticalTextAlignment="End"
+                                            HorizontalTextAlignment="Start" 
+                                            FontSize="Small"
+                                            TextColor="{StaticResource TextColorPage}"
+                                            FontAttributes="Bold" 
+                                        />
                                     <Label 
                                         Margin="6,0,6,10" 
                                         x:Name="release"
@@ -95,7 +104,8 @@
                                         Grid.Row="2" 
                                         Grid.Column="1" 
                                         Text="{Binding Release_date}"
-                                        FontSize="Small" TextColor="Gray" 
+                                        FontSize="Small"
+                                        TextColor="{StaticResource TextColorPage}"
                                         FontAttributes="Bold" 
                                     />
                                     <Image
