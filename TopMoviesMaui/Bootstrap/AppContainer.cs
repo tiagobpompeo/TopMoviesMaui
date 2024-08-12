@@ -19,7 +19,7 @@ namespace TopMoviesMaui.Bootstrap
             builder.RegisterType<FlyoutMenuPageViewModel>();
             builder.RegisterType<UpComingViewModel>();
             builder.RegisterType<UpComingDetailViewModel>();
-            
+            builder.RegisterType<TabbedMoviesViewModel>();
 
             //services - data
             builder.RegisterType<UpComing>().As<IUpComing>();

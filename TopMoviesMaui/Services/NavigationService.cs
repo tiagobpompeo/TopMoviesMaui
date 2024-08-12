@@ -25,7 +25,7 @@ namespace TopMoviesMaui.Services
 
         public async Task InitializeAsync()
         {          
-            await NavigateToAsync<UpComingViewModel>();           
+            await NavigateToAsync<TabbedMoviesViewModel>();           
         }
 
         public Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase
@@ -167,6 +167,7 @@ namespace TopMoviesMaui.Services
             _mappings.Add(typeof(FlyoutMenuPageViewModel), typeof(FlyoutMenuPageView));                   
             _mappings.Add(typeof(UpComingViewModel), typeof(UpComingView));
             _mappings.Add(typeof(UpComingDetailViewModel), typeof(UpComingDetailView));
+            _mappings.Add(typeof(TabbedMoviesViewModel), typeof(TabbedMoviesView));
             
             //others            
         }
