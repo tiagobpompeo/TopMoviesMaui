@@ -7,8 +7,14 @@
     Title="UpComingView">
 <ContentPage.Resources>
     <ResourceDictionary>
-        <Color x:Key="TextColorPage">Gray</Color>
+        <Color x:Key="TextColorPage">Gray</Color>     
     </ResourceDictionary>
+     <!--<OnPlatform x:Key="TextColorPage" x:TypeArguments="Color">
+        <On Platform="iOS" Value="Gray" />
+        <On Platform="Android" Value="Gray" />
+        <On Platform="WinUI" Value="Silver" />
+        <On Platform="MacCatalyst" Value="Silver" />
+    </OnPlatform>-->    
 </ContentPage.Resources>
     <StackLayout>
         <StackLayout.Margin>

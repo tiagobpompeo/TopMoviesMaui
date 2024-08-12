@@ -133,13 +133,24 @@ namespace TopMoviesMaui.ViewModels
 
         private async void OnMovieTapped(Movies.Result selectedMovie)
         {
-            Console.WriteLine("OnMovieTapped " + selectedMovie.Id);
+            try
+            {
+                Console.WriteLine("OnMovieTapped " + selectedMovie.Id);
 
-            var navigationService = AppContainer.Resolve<INavigationService>();
-            await navigationService.NavigateToAsync<UpComingDetailViewModel>(selectedMovie);// Inicia a pagina Inicial
+                var navigationService = AppContainer.Resolve<INavigationService>();
 
-                 
+                if (selectedMovie!=null)
+                {
+                    await navigationService.NavigateToAsync<UpComingDetailViewModel>(selectedMovie);// Inicia a pagina Inicial
+                }             
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
+           
 
         public void PerformSearch()
         {

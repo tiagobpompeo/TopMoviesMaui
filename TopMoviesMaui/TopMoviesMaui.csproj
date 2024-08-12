@@ -89,6 +89,14 @@
 	  <None Remove="Views\Templates\" />
 	  <None Remove="Resources\Images\hamburguer.png" />
 	  <None Remove="Resources\Images\seta.png" />
+	  <None Remove="Resources\Images\list.png" />
+	  <None Remove="Resources\Images\ic_launcher.png" />
+	  <None Remove="Resources\Images\icon.png" />
+	  <None Remove="Resources\Images\movies_icon.png" />
+	  <None Remove="Resources\Images\play.png" />
+	  <None Remove="Resources\Images\rate.png" />
+	  <None Remove="Resources\Images\search.png" />
+	  <None Remove="Resources\Images\share.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -107,5 +115,15 @@
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\hamburguer.png" />
 	  <BundleResource Include="Resources\Images\seta.png" />
+	  <BundleResource Include="Resources\Images\list.png" />
+	  <BundleResource Include="Resources\Images\ic_launcher.png" />
+	  <BundleResource Include="Resources\Images\icon.png" />
+	  <BundleResource Include="Resources\Images\ic_launcher.png" />
+	  <BundleResource Include="Resources\Images\icon.png" />
+	  <BundleResource Include="Resources\Images\movies_icon.png" />
+	  <BundleResource Include="Resources\Images\play.png" />
+	  <BundleResource Include="Resources\Images\rate.png" />
+	  <BundleResource Include="Resources\Images\search.png" />
+	  <BundleResource Include="Resources\Images\share.png" />
 	</ItemGroup>
 </Project>
