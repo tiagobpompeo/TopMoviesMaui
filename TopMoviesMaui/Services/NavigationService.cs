@@ -25,7 +25,7 @@ namespace TopMoviesMaui.Services
 
         public async Task InitializeAsync()
         {          
-            await NavigateToAsync<TabbedMoviesViewModel>();           
+            await NavigateToAsync<UpComingViewModel>();           
         }
 
         public Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase
