@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using TopMovies.Business;
 using TopMoviesMaui.Repository;
 using TopMoviesMaui.Services;
 using TopMoviesMaui.Services.Navigation;
@@ -20,6 +21,8 @@ namespace TopMoviesMaui.Bootstrap
             builder.RegisterType<UpComingViewModel>();
             builder.RegisterType<UpComingDetailViewModel>();
             builder.RegisterType<TabbedMoviesViewModel>();
+            //builder.RegisterType<StringViewModel>();
+            
 
             //services - data
             builder.RegisterType<UpComing>().As<IUpComing>();
@@ -30,7 +33,9 @@ namespace TopMoviesMaui.Bootstrap
             //General
             builder.RegisterType<NavigationService>().As<INavigationService>();
             builder.RegisterType<GenericRepository>().As<IGenericRepository>();
-          
+            builder.RegisterType<GenericRepository>().As<IGenericRepository>();
+            //builder.RegisterType<GenericRepositoryBusiness>().As<IGenericRepositoryBusiness>();
+
 
             _container = builder.Build();
         }

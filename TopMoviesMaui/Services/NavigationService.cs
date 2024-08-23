@@ -8,6 +8,7 @@ using TopMoviesMaui.Bootstrap;
 using TopMoviesMaui.ViewModels;
 using TopMoviesMaui.Views;
 using TopMoviesMaui.Services.Navigation;
+using TopMovies.Business;
 
 namespace TopMoviesMaui.Services
 {
@@ -24,8 +25,8 @@ namespace TopMoviesMaui.Services
         }
 
         public async Task InitializeAsync()
-        {          
-            await NavigateToAsync<UpComingViewModel>();           
+        {           
+           await NavigateToAsync<UpComingViewModel>();
         }
 
         public Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase
@@ -168,7 +169,7 @@ namespace TopMoviesMaui.Services
             _mappings.Add(typeof(UpComingViewModel), typeof(UpComingView));
             _mappings.Add(typeof(UpComingDetailViewModel), typeof(UpComingDetailView));
             _mappings.Add(typeof(TabbedMoviesViewModel), typeof(TabbedMoviesView));
-            
+            //_mappings.Add(typeof(StringViewModel), typeof(StringView));
             //others            
         }
     }

@@ -17,9 +17,9 @@ public partial class App : Application
 
     private void InitializeApp()
     {
+       // MainPage = new StringView();
         //Akavache.Registrations.Start("TopMovies");//Necessario para que akavache faca seu trabalho
         AppContainer.RegisterDependencies();// Registro VM, Interfaces e Servicos
-
         SentrySdk.CaptureMessage("Hello Sentry");
     }
 

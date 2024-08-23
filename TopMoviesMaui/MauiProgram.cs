@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using TopMovies.Business;
 
 namespace TopMoviesMaui;
 
@@ -49,9 +50,10 @@ public static class MauiProgram
 			});
 
 
-
+        //View Model 
+        builder.Services.AddTransient<StringViewModel>();
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
 		return builder.Build();

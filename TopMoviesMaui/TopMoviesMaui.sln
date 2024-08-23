@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1706.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopMoviesMaui", "TopMoviesMaui.csproj", "{357C5956-B5FA-45E5-9948-78EDC1DBB965}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopMovies.Business", "..\TopMovies.Business\TopMovies.Business.csproj", "{27C0532B-A860-4100-A9CF-10D25D246860}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{357C5956-B5FA-45E5-9948-78EDC1DBB965}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{357C5956-B5FA-45E5-9948-78EDC1DBB965}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{357C5956-B5FA-45E5-9948-78EDC1DBB965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C0532B-A860-4100-A9CF-10D25D246860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C0532B-A860-4100-A9CF-10D25D246860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C0532B-A860-4100-A9CF-10D25D246860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C0532B-A860-4100-A9CF-10D25D246860}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
