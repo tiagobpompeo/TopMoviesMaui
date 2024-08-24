@@ -7,28 +7,34 @@ namespace TopMovies.Business
 {
     public partial class StringViewModel : ObservableObject
     {
-        public StringViewModel()
-        {
-            StringModel = new StringModel();
-        }
-
         [ObservableProperty]
         private bool isRunning;
         public StringModel? StringModel { get; set; }
+        public GenericRepositoryBusiness genericRepositoryBusiness;
 
+        public StringViewModel()
+        {
+            StringModel = new StringModel();
+            genericRepositoryBusiness = new GenericRepositoryBusiness();
+        }
+
+     
         [RelayCommand]
         public async void GetString()
         {
-            IsRunning = true;
-
-            var data = this.StringModel.myString;
-
-            if (data == null)
+            try
             {
+                IsRunning = true;
 
+                await genericRepositoryBusiness.PostAsync("", StringModel.myString);
+
+                IsRunning = false;
             }
-
-            IsRunning = false;
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
+           
         }
     }
 }

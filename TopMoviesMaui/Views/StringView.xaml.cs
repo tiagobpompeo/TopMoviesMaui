@@ -9,7 +9,6 @@ public partial class StringView : ContentPage
     public StringView()
 	{
 		InitializeComponent();
-            this.BindingContext = vm = new StringViewModel();
-        
+        this.BindingContext = vm = new StringViewModel();        
     }
 }

@@ -8,6 +8,6 @@
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button Text="Save String" FontSize="13" Command="{Binding GetStringCommand}"  BackgroundColor="BlueViolet"/>
+        <Button Text="Save String" FontSize="13" Margin="20" Command="{Binding GetStringCommand}"  BackgroundColor="BlueViolet"/>
     </VerticalStackLayout>
 </ContentPage>

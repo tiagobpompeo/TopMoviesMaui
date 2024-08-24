@@ -11,13 +11,13 @@ public partial class App : Application
 		InitializeComponent();
 
         InitializeApp();
-        InitializeNavigation();
-         
-	}
+        //InitializeNavigation();
+        MainPage = new StringView();
+    }
 
     private void InitializeApp()
     {
-       // MainPage = new StringView();
+       
         //Akavache.Registrations.Start("TopMovies");//Necessario para que akavache faca seu trabalho
         AppContainer.RegisterDependencies();// Registro VM, Interfaces e Servicos
         SentrySdk.CaptureMessage("Hello Sentry");
@@ -28,6 +28,7 @@ public partial class App : Application
         //Resolve : casos em que eh necessario instancia, e nao ha injecao de dependencia no construtor(casos VM)
         var navigationService = AppContainer.Resolve<INavigationService>();
         await navigationService.InitializeAsync();// Inicia a pagina Inicial
+       
     }
 }
 
