@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using TopMovies.Business;
+using Plugin.Maui.DebugRainbows;
 
 namespace TopMoviesMaui;
 
@@ -8,9 +9,15 @@ public static class MauiProgram
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
-		builder
-			.UseMauiApp<App>()
-
+        builder
+            .UseMauiApp<App>()
+            //.UseDebugRainbows(new DebugRainbowsOptions
+            //{
+            //    ShowGrid = true,
+            //    ShowRainbows = false,
+            //    GridOrigin = DebugGridOrigin.Center
+                
+            //})
             .UseSentry(options => {
                 // The DSN is the only required setting.
                 options.Dsn = "https://14bc3a5500ce1e96b9d679db9fa77671@o1326831.ingest.us.sentry.io/4507548914548736";
@@ -42,6 +49,8 @@ public static class MauiProgram
 
                 // Other Sentry options can be set here.
             })
+
+          
 
             .ConfigureFonts(fonts =>
 			{

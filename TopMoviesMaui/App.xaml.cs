@@ -11,8 +11,8 @@ public partial class App : Application
 		InitializeComponent();
 
         InitializeApp();
-        //InitializeNavigation();
-        MainPage = new StringView();
+        InitializeNavigation();
+        //MainPage = new StringView();
     }
 
     private void InitializeApp()
