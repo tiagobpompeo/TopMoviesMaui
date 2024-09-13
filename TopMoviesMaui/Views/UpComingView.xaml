@@ -5,6 +5,9 @@
     x:Class="TopMoviesMaui.Views.UpComingView"
     xmlns:behaviors="clr-namespace:TopMoviesMaui.Behaviors;assembly=TopMoviesMaui" 
     Title="UpComingView">
+<ContentPage.ToolbarItems>
+    <ToolbarItem Text="Add Movie" Clicked="ToolbarItem_Clicked"/>            
+</ContentPage.ToolbarItems>
 <ContentPage.Resources>
     <ResourceDictionary>
         <Color x:Key="TextColorPage">Gray</Color>     

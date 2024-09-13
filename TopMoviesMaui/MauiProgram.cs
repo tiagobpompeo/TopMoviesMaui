@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
 using TopMovies.Business;
 using Plugin.Maui.DebugRainbows;
+using Firebase.Database;
+using TopMoviesMaui.Models;
+using Firebase.Database.Query;
 
 namespace TopMoviesMaui;
 
@@ -64,8 +67,10 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
+      
 
-		return builder.Build();
-	}
+        return builder.Build();
+	}    
+
 }
 

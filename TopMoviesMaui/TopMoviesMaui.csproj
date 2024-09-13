@@ -76,6 +76,7 @@
 		<PackageReference Include="AppoMobi.Maui.DrawnUi" Version="1.2.3.8" />
 		<PackageReference Include="Plugin.Maui.DebugRainbows" Version="1.2.1" />
 		<PackageReference Include="HorusStudio.Maui.Skeleton" Version="2.0.0" />
+		<PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
 	</ItemGroup>
 
 	<ItemGroup>
