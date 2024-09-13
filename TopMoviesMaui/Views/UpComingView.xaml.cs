@@ -1,5 +1,7 @@
-﻿using Firebase.Database;
+﻿using Android.Graphics;
+using Firebase.Database;
 using Firebase.Database.Query;
+using Newtonsoft.Json;
 using TopMoviesMaui.Models;
 using TopMoviesMaui.ViewModels;
 
@@ -38,9 +40,9 @@ public partial class UpComingView : ContentPage
         }
     }
 
-    public static void RegisterRealTimeDataBase()
+    public async void RegisterRealTimeDataBase()
     {
-        FirebaseClient client = new FirebaseClient("seulinkdatabasenofirebase");
+        FirebaseClient client = new FirebaseClient("SUAURL");
 
         var movies = client.Child("MoviesUpComing").OnceAsync<Movies.Result>();
 
@@ -64,7 +66,23 @@ public partial class UpComingView : ContentPage
                 Vote_average = 7.182,
                 Vote_count = 351,
             });
+
+            Alert("Adicionado");
+            
+        }        
+        else
+        {          
+            // Serializar o objeto em JSON
+            string json = JsonConvert.SerializeObject(movies.Result, Formatting.Indented);
+            // Imprimir o JSON
+            Console.WriteLine(json);
+            Alert("Exibido Conteudo no Console");
         }
     }
 
+    public async void Alert(string msg)
+    {
+        await DisplayAlert("Alert", msg, "OK");
+
+    }
 }
