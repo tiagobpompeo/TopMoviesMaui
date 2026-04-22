@@ -1,5 +1,4 @@
-﻿using Android.Graphics;
-using Firebase.Database;
+﻿using Firebase.Database;
 using Firebase.Database.Query;
 using Newtonsoft.Json;
 using TopMoviesMaui.Models;
