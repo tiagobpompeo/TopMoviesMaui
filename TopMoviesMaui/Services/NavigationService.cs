@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -8,7 +8,6 @@ using TopMoviesMaui.Bootstrap;
 using TopMoviesMaui.ViewModels;
 using TopMoviesMaui.Views;
 using TopMoviesMaui.Services.Navigation;
-using TopMovies.Business;
 
 namespace TopMoviesMaui.Services
 {
@@ -169,7 +168,6 @@ namespace TopMoviesMaui.Services
             _mappings.Add(typeof(UpComingViewModel), typeof(UpComingView));
             _mappings.Add(typeof(UpComingDetailViewModel), typeof(UpComingDetailView));
             _mappings.Add(typeof(TabbedMoviesViewModel), typeof(TabbedMoviesView));
-            //_mappings.Add(typeof(StringViewModel), typeof(StringView));
             //others            
         }
     }

@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using TopMovies.Business;
+using Microsoft.Extensions.Logging;
 using Plugin.Maui.DebugRainbows;
 using Firebase.Database;
 using TopMoviesMaui.Models;
@@ -60,10 +59,6 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-
-
-        //View Model 
-        builder.Services.AddTransient<StringViewModel>();
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

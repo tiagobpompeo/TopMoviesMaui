@@ -132,7 +132,4 @@
 	  <BundleResource Include="Resources\Images\search.png" />
 	  <BundleResource Include="Resources\Images\share.png" />
 	</ItemGroup>
-	<ItemGroup>
-	  <ProjectReference Include="..\TopMovies.Business\TopMovies.Business.csproj" />
-	</ItemGroup>
 </Project>

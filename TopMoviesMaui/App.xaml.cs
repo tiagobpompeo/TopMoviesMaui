@@ -1,6 +1,5 @@
-﻿using TopMoviesMaui.Bootstrap;
+using TopMoviesMaui.Bootstrap;
 using TopMoviesMaui.Services.Navigation;
-using TopMoviesMaui.Views;
 
 namespace TopMoviesMaui;
 
@@ -12,7 +11,6 @@ public partial class App : Application
 
         InitializeApp();
         InitializeNavigation();
-        //MainPage = new StringView();
     }
 
     private void InitializeApp()

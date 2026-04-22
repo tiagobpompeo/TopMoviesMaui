@@ -1,5 +1,4 @@
-﻿using Autofac;
-using TopMovies.Business;
+using Autofac;
 using TopMoviesMaui.Repository;
 using TopMoviesMaui.Services;
 using TopMoviesMaui.Services.Navigation;
@@ -21,7 +20,6 @@ namespace TopMoviesMaui.Bootstrap
             builder.RegisterType<UpComingViewModel>();
             builder.RegisterType<UpComingDetailViewModel>();
             builder.RegisterType<TabbedMoviesViewModel>();
-            //builder.RegisterType<StringViewModel>();
             
 
             //services - data
